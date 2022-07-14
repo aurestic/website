@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+<data>
+
+
+<template id="cookies_policy">
+    <t t-call="website.layout">
+        <div id="wrap">
+            <div class="oe_structure">
+                <section data-snippet-id="title">
+                    <h1 class="text-center">Cookie Declaration</h1>
+                </section>
+            </div>
+            <section class="mb-5 mt-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div id="cookiefirst-policy-page" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="oe_structure" />
+        </div>
+    </t>
+</template>
+
+</data>
+</openerp>
