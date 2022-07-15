@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+<data>
+
+<record id="view_website_config_settings_inh_cookiefirst" model="ir.ui.view">
+    <field name="model">res.config.settings</field>
+    <field name="model">website.config.settings</field>
+    <field name="inherit_id" ref="website.view_website_config_settings" />
+    <field name="arch" type="xml">
+        <xpath expr="//group[@string='Menu']" position="after">
+            <group string="CookieFirst">
+                <label for="cookiefirst_enabled"/>
+                <div name="cookiefirst_enabled">
+                    <div>
+                        <div name="cookiefirst_enabled" class="oe_inline">
+                            <field name="cookiefirst_enabled"/>
+                        </div>
+                    </div>
+                </div>
+                <label for="cookiefirst_identifier" attrs="{'invisible': [('cookiefirst_enabled', '=', False)]}"/>
+                <div name="cookiefirst_identifier" attrs="{'invisible': [('cookiefirst_enabled', '=', False)]}">
+                    <div>
+                        <div name="cookiefirst_identifier" class="oe_inline">
+                            <field name="cookiefirst_identifier"
+                                placeholder="00000000-0000-0000-0000-000000000000"
+                                attrs="{'required': [('cookiefirst_enabled', '!=', False)]}"/>
+                        </div>
+                    </div>
+                </div>
+            </group>
+        </xpath>
+    </field>
+</record>
+
+</data>
+</openerp>
