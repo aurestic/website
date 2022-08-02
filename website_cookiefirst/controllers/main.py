@@ -11,6 +11,6 @@ class WebsiteInhCookieFirst(Website):
         auth="public",
         website=True,
     )
-    def index(self, **kw):
+    def cookiefirst_index(self, **kw):
         page = "website_cookiefirst.cookies_policy"
         return self.page(page)
